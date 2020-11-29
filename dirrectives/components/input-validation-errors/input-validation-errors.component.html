@@ -1,0 +1,8 @@
+<div [hidden]="!validationService.hasWrongValue(form, fieldName)">
+  <ng-container *ngFor="let error of validationService.getFieldErrors(form, fieldName)">
+    <p class="d-flex align-items-center">
+      <i class="icon icon-alert-triangle"></i>
+      <span class="capitalize-first">{{error}}</span>
+    </p>
+  </ng-container>
+</div>
